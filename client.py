@@ -4,7 +4,7 @@ from PyQt5 import uic
 import requests
 
 
-class Example(QWidget):
+class LoginWindow(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('qtex1.ui', self)
@@ -25,7 +25,7 @@ def except_hook(cls, exception, traceback):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = LoginWindow()
     ex.show()
     sys.excepthook = except_hook
     sys.exit(app.exec_())
